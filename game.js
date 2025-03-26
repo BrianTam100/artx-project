@@ -10,50 +10,7 @@ function launchInterphase(){
     window.location.href = "interphase.html"
 }
 
-// Game Logic
-
-        // Function to handle G1 phase completion
-        function completeG1() {
-            const answer = document.getElementById("g1Answer").value.trim().toLowerCase();
-            if (answer === "proteins" || answer === "protein") {
-                alert("Great! You have passed the G1 phase.");
-                document.getElementById("g1").style.display = "none";
-                document.getElementById("s-phase").style.display = "block";
-            } else {
-                alert("Incorrect! Try again.");
-            }
-        }
-
-        // Function to handle S phase completion
-        function completeS() {
-            const answer = document.getElementById("sAnswer").value.trim().toLowerCase();
-            if (answer === "dna") {
-                alert("DNA replication is completed!");
-                document.getElementById("s-phase").style.display = "none";
-                document.getElementById("g2-phase").style.display = "block";
-            } else {
-                alert("Incorrect! Try again.");
-            }
-        }
-
-        // Function to handle G2 phase completion
-        function completeG2() {
-            const answer = document.getElementById("g2Answer").value.trim().toLowerCase();
-            if (answer === "organelles") {
-                alert("The cell is ready to advance to prophase.");
-                document.getElementById("g2-phase").style.display = "none";
-                document.getElementById("proceed").style.display = "block";
-            } else {
-                alert("Incorrect! Try again.");
-            }
-        }
-
-        // Function to proceed to Prophase
-        function proceedToProphase() {
-            window.location.href = "prophase.html";  // Redirect to Prophase page
-        }
 function completeProphase() {
-    // Get the selected answer from the radio buttons
     const selectedOption = document.querySelector('input[name="alignment"]:checked');
     
     if (!selectedOption) {
@@ -61,14 +18,11 @@ function completeProphase() {
         return;
     }
 
-    // Check if the selected answer is correct (answer "A" is correct in this case)
     if (selectedOption.value === "A") {
         alert("Great! You've aligned the chromosomes in Prophase.");
         
-        // Hide the current Prophase task
         document.getElementById("align-chromosomes").style.display = "none";
         
-        // Show the "Completed" section
         document.getElementById("completed").style.display = "block";
         
     } else {
@@ -76,8 +30,58 @@ function completeProphase() {
     }
 }
 
-// Function to proceed to the next stage (Metaphase)
 function proceedToMutation() {
-    // Redirect to the Metaphase page (this could be another HTML page)
     window.location.href = "mutation.html";  // Redirect to Metaphase page
+}
+
+
+function checkAnswers() {
+    const answer1 = document.querySelector('input[name="mutation1"]:checked');
+    const answer2 = document.querySelector('input[name="mutation2"]:checked');
+
+    if (!answer1 || !answer2) {
+        alert("Please answer both questions before proceeding.");
+        return;
+    }
+
+    const correctAnswer1 = answer1.value === "B"; 
+    const correctAnswer2 = answer2.value === "B"; 
+
+    if (correctAnswer1 && correctAnswer2) {
+        document.getElementById("mutationForm1").style.display = "none";
+        document.getElementById("mutationForm2").style.display = "none";
+        document.getElementById("mutationCompleted").style.display = "block";
+    } else {
+        alert("Oops, try again! Make sure both answers are correct.");
+    }
+}
+
+function proceedToNextStage() {
+    window.location.href = "metaphase.html";
+}
+
+function checkAnswers2() {
+    const answer1 = document.querySelector('input[name="metaphase"]:checked');
+    const answer2 = document.querySelector('input[name="spindle"]:checked');
+    
+    if (!answer1 || !answer2) {
+        alert("Please answer both questions before proceeding.");
+        return;
+    }
+
+    const correctAnswer1 = answer1.value === "A"; 
+    const correctAnswer2 = answer2.value === "A"; 
+
+    if (correctAnswer1 && correctAnswer2) {
+        document.getElementById("questionForm1").style.display = "none";
+        document.getElementById("questionForm2").style.display = "none";
+        document.getElementById("metaphaseCompleted").style.display = "block";
+        window.location.href = "anaphase.html";
+    } else {
+        alert("Oops, try again! Make sure both answers are correct.");
+    }
+}
+
+function proceedToAnaphase() {
+    window.location.href = "anaphase.html"; 
 }

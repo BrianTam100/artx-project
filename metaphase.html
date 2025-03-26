@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metaphase - Mitosis Game</title>
+</head>
+<body>
+
+    <h1>Metaphase - Mitosis Breakdown</h1>
+    <!-- Metaphase Explanation -->
+    <div id="metaphase">
+        <p>During Metaphase, the chromosomes align along the metaphase plate (the center of the cell). This is ensures that each daughter cell will receive an identical set of chromosomes. The mitotic spindle fibers extend from the centrioles at opposite poles of the cell and attach to the kinetochores of the chromosomes, ensuring they are properly aligned before they are separated.</p>
+        <p>The chromosomes line up in the center of the cell, and the cell ensures all chromosomes are attached to the spindle fibers before proceeding to the next phase.</p>
+    </div>
+
+    <h3>Question 1: What happens during Metaphase?</h3>
+    <p>Choose the correct description of what happens during Metaphase:</p>
+
+    <!-- Multiple Choice Question 1 -->
+    <form id="questionForm1">
+        <input type="radio" id="option1" name="metaphase" value="A">
+        <label for="option1">Chromosomes align along the metaphase plate, ready for separation.</label><br><br>
+
+        <input type="radio" id="option2" name="metaphase" value="B">
+        <label for="option2">Chromosomes replicate, and the nuclear envelope breaks down.</label><br><br>
+
+        <input type="radio" id="option3" name="metaphase" value="C">
+        <label for="option3">Chromosomes are randomly scattered throughout the cell.</label><br><br>
+
+        <input type="radio" id="option4" name="metaphase" value="D">
+        <label for="option4">Chromosomes attach to the centrioles at the poles of the cell.</label><br><br>
+    </form>
+
+    <h3>Question 2: What is the purpose of the spindle fibers during Metaphase?</h3>
+    <p>Choose the correct description of the role of spindle fibers during Metaphase:</p>
+
+    <!-- Multiple Choice Question 2 -->
+    <form id="questionForm2">
+        <input type="radio" id="option1" name="spindle" value="A">
+        <label for="option1">Spindle fibers ensure that chromosomes are aligned properly at the metaphase plate.</label><br><br>
+
+        <input type="radio" id="option2" name="spindle" value="B">
+        <label for="option2">Spindle fibers break down the chromosomes into smaller pieces.</label><br><br>
+
+        <input type="radio" id="option3" name="spindle" value="C">
+        <label for="option3">Spindle fibers repair DNA damage caused by mitotic errors.</label><br><br>
+
+        <input type="radio" id="option4" name="spindle" value="D">
+        <label for="option4">Spindle fibers separate the chromatids in the next phase of mitosis.</label><br><br>
+    </form>
+
+    <!-- Completed Section -->
+    <div id="metaphaseCompleted" style="display:none;">
+        <p>Correct! Both answers are correct:</p>
+        <ul>
+            <li>**Chromosomes align along the metaphase plate, ready for separation.**</li>
+            <li>**Spindle fibers ensure that chromosomes are aligned properly at the metaphase plate.**</li>
+        </ul>
+        <button class="btn" onclick="proceedToAnaphase()">Proceed to Anaphase</button>
+    </div>
+
+        <script src = "game.js"></script>
+
+    <button class="btn" type="button" onclick="checkAnswers2()">Submit Both Answers</button>
+
+</body>
+</html>

@@ -8,43 +8,36 @@
 <body>
 
     <h1>Interphase - Phases Breakdown</h1>
-    <p>Answer the questions correctly about the three phases in Interphase to advance to Prophase.</p>
+    <p>Background information about the three phases in Interphase.</p>
 
-    <!-- G1 Phase (Growth) -->
     <div id="g1">
         <h2>G1 Phase: Cell Growth</h2>
-        <p>During the G1 phase, the cell grows in size, produces RNA and proteins, and prepares for DNA replication.</p>
-        <p><strong>Fill in the blank:</strong> In G1, the cell produces __________.</p>
-        <input type="text" id="g1Answer" placeholder="Enter answer here">
-        <button onclick="completeG1()">Complete G1 Phase</button>
+        <p>During the G1 phase, the cell grows in size, produces RNA and proteins, and prepares for DNA replication. This phase prepares the cell for DNA replication in the S phase.</p>
     </div>
-    <img src = "interphase.png">
+    
+    <img src="interphase.png" alt="Interphase illustration" style="max-width: 100%;">
 
-    <!-- S Phase (DNA Replication) -->
-    <div id="s-phase" style="display: none;">
+    <div id="s-phase">
         <h2>S Phase: DNA Replication</h2>
-        <p>In S phase, DNA is replicated. The entire genome is copied to prepare for cell division.</p>
-        <p><strong>Fill in the blank:</strong> In S phase, the cell replicates __________ (hint: this material carries genetic information).</p>
-        <input type="text" id="sAnswer" placeholder="Enter answer here">
-        <button onclick="completeS()">Complete S Phase</button>
+        <p>In the S phase, the cell replicates its DNA, making an exact copy of its entire genome, ensuring that both daughter cells have the same genetic mateiral
+        <p><strong>Key Activity:</strong> The entire genome is copied during this phase, preparing for accurate chromosome separation in the next stage of cell division.</p>
     </div>
 
-    <!-- G2 Phase (Preparation for Mitosis) -->
-    <div id="g2-phase" style="display: none;">
+    <div id="g2-phase">
         <h2>G2 Phase: Preparing for Mitosis</h2>
-        <p>In the G2 phase, the cell synthesizes more proteins and organelles to prepare for mitosis.</p>
-        <p><strong>Fill in the blank:</strong> In G2, the cell prepares for mitosis by making more __________ (hint: these are needed for cell division).</p>
-        <input type="text" id="g2Answer" placeholder="Enter answer here">
-        <button onclick="completeG2()">Complete G2 Phase</button>
+        <p>In the G2 phase, the cell continues to grow and synthesizes more proteins and organelles. This phase ensures that the cell is fully prepared to enter mitosis, with all the necessary components for cell division.</p>
+        <p><strong>Key Activity:</strong> The cell checks for DNA errors and ensures all required proteins and organelles are ready for mitosis.</p>
     </div>
 
-    <!-- Proceed Button -->
-    <div id="proceed" style="display: none;">
+    <div id="proceed">
         <button onclick="proceedToProphase()">Proceed to Prophase</button>
     </div>
 
-
-    <script src = "game.js"></script>
+    <script>
+        function proceedToProphase() {
+            window.location.href = "prophase.html";  
+        }
+    </script>
 
 </body>
 </html>

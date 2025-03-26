@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutation - Mitosis Game</title>
+</head>
+<body>
+
+    <h1>Mutation - Consequences of Mitotic Errors</h1>
+    <h2>Background Information:</h2>
+    <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6004076/#s3">Source</a>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/10992296/">Source</a>
+    <p>During mitosis, errors in chromosome segregation can cause significant DNA damage. This damage can lead to structural alterations in chromosomes, and cause diseases like cancer.</p>
+
+    <p>Recent evidence suggests that errors in chromosome segregation, like lagging chromosomes or SAC (Spindle assembly checkpoint) defects, can lead to:</p>
+    <ul>
+        <li>Aneuploidy - a condition where cells have an abnormal number of chromosomes.</li>
+        <li>Chromothripsis - a phenomenon where chromosomes shatter and reassemble, resulting in highly localized chromosomal rearrangements.</li>
+        <li>Micronuclei - fragmented chromosomes that fail to integrate into the main cell nucleus and become trapped in small nuclei that are fragile and prone to DNA damage.</li>
+    </ul>
+
+    <p>Errors in mitosis and chromosomal instability (CIN) can lead to cancer progression, especially when cells acquire oncogenes or experience chromosomal rearrangements.</p>
+
+    <h3>Question 1: What happens if chromosomes lag during anaphase?</h3>
+    <p>If chromosomes lag in anaphase, they can be damaged and lead to various consequences. Choose the correct consequence of lagging chromosomes during mitosis:</p>
+
+    <form id="mutationForm1">
+        <input type="radio" id="option1" name="mutation1" value="A">
+        <label for="option1">Lagging chromosomes align properly during anaphase without any issues.</label><br><br>
+
+        <input type="radio" id="option2" name="mutation1" value="B">
+        <label for="option2">Lagging chromosomes acquire DNA damage and may be partitioned into micronuclei.</label><br><br>
+
+        <input type="radio" id="option3" name="mutation1" value="C">
+        <label for="option3">Lagging chromosomes do not cause any significant problems in cell division.</label><br><br>
+
+        <input type="radio" id="option4" name="mutation1" value="D">
+        <label for="option4">Lagging chromosomes immediately reassemble without any errors.</label><br><br>
+    </form>
+
+    <h3>Question 2: hBUB1 Mutations in Lung Cancer</h3>
+    <p>Recent studies have shown that mutations in the hBUB1 gene are linked to lung cancer. In one study, somatic mutations were found in lung cancer cell lines and primary tumors. The following mutations were detected in the hBUB1 gene:</p>
+    <ul>
+        <li>A cytosine-to-guanine substitution in codon 51 of exon 5, leading to a histidine-to-aspartic acid amino acid substitution.</li>
+        <li>A thymine-to-cytosine substitution in codon 430 of exon 12, which did not result in an amino acid substitution.</li>
+        <li>A guanine-to-thymine substitution in codon 93 of exon 4, found in both a lung cancer cell line and a primary tumor.</li>
+    </ul>
+    <p>What is the effect of a somatic mutation in the hBUB1 gene in the context of lung cancer?</p>
+
+    <form id="mutationForm2">
+        <input type="radio" id="option1" name="mutation2" value="A">
+        <label for="option1">The mutation leads to better chromosome alignment and cell division accuracy in lung cancer cells.</label><br><br>
+
+        <input type="radio" id="option2" name="mutation2" value="B">
+        <label for="option2">The mutation results in chromosomal instability, which contributes to tumor progression and aneuploidy.</label><br><br>
+
+        <input type="radio" id="option3" name="mutation2" value="C">
+        <label for="option3">The mutation has no impact on the division process and does not contribute to cancer development.</label><br><br>
+
+        <input type="radio" id="option4" name="mutation2" value="D">
+        <label for="option4">The mutation prevents the formation of aneuploidy, leading to healthy cell division.</label><br><br>
+    </form>
+
+    <div id="mutationCompleted" style="display:none;">
+        <p>Correct!</p>
+        <ul>
+            <li>Lagging chromosomes acquire DNA damage and may be partitioned into micronuclei.</li>
+            <li>hBUB1 mutations result in chromosomal instability, contributing to tumor progression and aneuploidy.</li>
+        </ul>
+        <button class="btn" onclick="proceedToNextStage()">Proceed to Next Stage</button>
+    </div>
+    <script src = "game.js"></script>
+
+    <button class="btn" type="button" onclick="checkAnswers()">Submit Both Answers</button>
+
+</body>
+</html>
