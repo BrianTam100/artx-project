@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prophase - Mitosis Game</title>
+</head>
+<body>
+
+    <h1>Prophase - Mitosis Game</h1>
+
+    <!-- Prophase Task: Multiple Choice -->
+    <div id="align-chromosomes">
+        <p>Choose the correct description of what happens during Prophase:</p>
+
+        <!-- Multiple Choice Options -->
+        <form id="questionForm">
+            <input type="radio" id="option1" name="alignment" value="A">
+            <label for="option1">Chromosomes align in the middle of the cell.</label><br><br>
+
+            <input type="radio" id="option2" name="alignment" value="B">
+            <label for="option2">Chromosomes move to opposite sides of the cell.</label><br><br>
+
+            <input type="radio" id="option3" name="alignment" value="C">
+            <label for="option3">The nuclear envelope forms.</label><br><br>
+
+            <input type="radio" id="option4" name="alignment" value="D">
+            <label for="option4">Chromosomes disappear and are not visible yet.</label><br><br>
+
+            <button class="btn" type="button" onclick="completeProphase()">Submit Answer</button>
+        </form>
+    </div>
+
+    <div id="completed" style="display:none;">
+        <p>Chromosomes aligned successfully! Ready to move on to the next stage.</p>
+        <button class="btn" onclick="proceedToMutation()">Proceed to Metaphase</button>
+    </div>
+
+    <script src = "game.js"></script>
+
+
+</body>
+</html>

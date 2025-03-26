@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitosis Game</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS -->
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Mitosis Game</h1>
+        <p>Complete each phase of Mitosis to divide the cell successfully.</p>
+    </header>
+
+    <!-- Game Area -->
+    <div class="game-area">
+        <div class="game-board">
+            <!-- Interphase Stage -->
+            <div class="stage" id="interphase">
+                <h2>Interphase</h2>
+                <p>In this phase, the cell prepares for division. Do you want to explore more about interphase?</p>
+                <button class="btn" onclick="launchInterphase()">Yes</button>
+            </div>
+
+            <!-- Prophase Stage (hidden initially) -->
+            <div class="stage" id="prophase" style="display: none;">
+                <h2>Prophase</h2>
+                <p>The chromosomes condense. Are you ready to align the chromosomes?</p>
+                <button class="btn" onclick="answerQuestion('prophase')">Align Chromosomes</button>
+            </div>
+
+            <!-- Metaphase Stage (hidden initially) -->
+            <div class="stage" id="metaphase" style="display: none;">
+                <h2>Metaphase</h2>
+                <p>In Metaphase, chromosomes align in the center of the cell. Do you want to align them?</p>
+                <button class="btn" onclick="answerQuestion('metaphase')">Align Chromosomes</button>
+            </div>
+
+            <!-- Anaphase Stage (hidden initially) -->
+            <div class="stage" id="anaphase" style="display: none;">
+                <h2>Anaphase</h2>
+                <p>During Anaphase, the chromosomes are pulled apart to opposite sides of the cell. Ready to pull apart?</p>
+                <button class="btn" onclick="answerQuestion('anaphase')">Pull Apart Chromosomes</button>
+            </div>
+
+            <!-- Telophase Stage (hidden initially) -->
+            <div class="stage" id="telophase" style="display: none;">
+                <h2>Telophase</h2>
+                <p>During Telophase, the cell prepares to divide into two cells. Are you ready for cell division?</p>
+                <button class="btn" onclick="answerQuestion('telophase')">Complete Division</button>
+            </div>
+
+            <!-- Cytokinesis Stage (hidden initially) -->
+            <div class="stage" id="cytokinesis" style="display: none;">
+                <h2>Cytokinesis</h2>
+                <p>In this final step, the cytoplasm divides, and two new daughter cells are formed. Do you want to complete cell division?</p>
+                <button class="btn" onclick="answerQuestion('cytokinesis')">Complete Cytokinesis</button>
+            </div>
+        </div>
+    </div>
+
+    <script src = "game.js"></script>
+
+</body>
+</html>

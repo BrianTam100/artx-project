@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+
+
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(80deg, #A8E6A3, #6CCF8B); /* Soft green gradient */
+            color: #333; /* Dark text color for contrast */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 36px;
+            color: coral;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Light shadow for contrast */
+        }
+
+        /* Game board container */
+        .board {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+
+        /* Cell styling for the game board */
+        .cell {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #4CAF50; /* Green border for the cells */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            background-color: #FFF; /* White background for cells */
+        }
+
+        .active {
+            background-color: #4CAF50; /* Active cell gets a green background */
+            color: white;
+        }
+
+        /* Button styling */
+        .btn, .dropbtn {
+            margin-top: 40px;
+            padding: 15px 30px; /* Consistent padding for button */
+            font-size: 18px;
+            background-color: #FF5733; /* Nice red color */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* Button hover effect */
+        .btn:hover, .dropbtn:hover {
+            background-color: #D84B2A; /* Darker red when hovered */
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown content styling */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 140px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 8px; /* Rounded corners for dropdown */
+        }
+
+        /* Dropdown links with the same padding as the button */
+        .dropdown-content a {
+            color: #333;
+            padding: 15px 30px; /* Same padding as the button */
+            text-decoration: none;
+            display: block;
+            background-color: #FFF; /* White background for dropdown links */
+            border-bottom: 1px solid #ddd; /* Light border between items */
+            transition: background-color 0.3s;
+        }
+
+        /* Hover effect for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #FF5733; /* Matches the button hover color */
+            color: white;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mitosis Game</h1>
+
+    <!-- Dropdown for game mode selection -->
+    <div class="dropdown">
+        <button class="dropbtn">Hover over me</button>
+        <div class="dropdown-content">
+            <a href="#" onclick="goToMitosis()">Mitosis</a>
+        </div>
+    </div>
+
+
+    <script src = "game.js"></script>
+
+</body>
+</html>

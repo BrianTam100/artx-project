@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interphase - Phases Breakdown</title>
+</head>
+<body>
+
+    <h1>Interphase - Phases Breakdown</h1>
+    <p>Answer the questions correctly about the three phases in Interphase to advance to Prophase.</p>
+
+    <!-- G1 Phase (Growth) -->
+    <div id="g1">
+        <h2>G1 Phase: Cell Growth</h2>
+        <p>During the G1 phase, the cell grows in size, produces RNA and proteins, and prepares for DNA replication.</p>
+        <p><strong>Fill in the blank:</strong> In G1, the cell produces __________.</p>
+        <input type="text" id="g1Answer" placeholder="Enter answer here">
+        <button onclick="completeG1()">Complete G1 Phase</button>
+    </div>
+    <img src = "interphase.png">
+
+    <!-- S Phase (DNA Replication) -->
+    <div id="s-phase" style="display: none;">
+        <h2>S Phase: DNA Replication</h2>
+        <p>In S phase, DNA is replicated. The entire genome is copied to prepare for cell division.</p>
+        <p><strong>Fill in the blank:</strong> In S phase, the cell replicates __________ (hint: this material carries genetic information).</p>
+        <input type="text" id="sAnswer" placeholder="Enter answer here">
+        <button onclick="completeS()">Complete S Phase</button>
+    </div>
+
+    <!-- G2 Phase (Preparation for Mitosis) -->
+    <div id="g2-phase" style="display: none;">
+        <h2>G2 Phase: Preparing for Mitosis</h2>
+        <p>In the G2 phase, the cell synthesizes more proteins and organelles to prepare for mitosis.</p>
+        <p><strong>Fill in the blank:</strong> In G2, the cell prepares for mitosis by making more __________ (hint: these are needed for cell division).</p>
+        <input type="text" id="g2Answer" placeholder="Enter answer here">
+        <button onclick="completeG2()">Complete G2 Phase</button>
+    </div>
+
+    <!-- Proceed Button -->
+    <div id="proceed" style="display: none;">
+        <button onclick="proceedToProphase()">Proceed to Prophase</button>
+    </div>
+
+
+    <script src = "game.js"></script>
+
+</body>
+</html>
